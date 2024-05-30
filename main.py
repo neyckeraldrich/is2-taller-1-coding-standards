@@ -95,7 +95,6 @@ def main():
     dist = "Paris"
     num = 5
     dur = 10
-    seats = 400
 
     #this are the outputs
     calculator = Vacation_(dist, num, dur)
