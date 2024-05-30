@@ -21,7 +21,7 @@ class passanger:
             return 0.1
         elif self.num <= 10:
             return 0.2
-        #TODO: add more discount levels if needed
+        # Add more discount levels if needed
         else:
             return 0.0
 
