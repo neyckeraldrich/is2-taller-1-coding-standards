@@ -8,7 +8,7 @@ class myclass:
     def validThis(self, dist):
         return type(dist) == str
 
-class passagner:
+class passanger:
     def __init__(self, num):
         self.num = num
     
@@ -68,7 +68,7 @@ class Vacation_:
 
     def __init__(self, dist, num, dur):
         self.myclass = myclass()
-        self.passagner = passagner(num)
+        self.passagner = passanger(num)
         self.total_TIME = total_TIME(dur)
         self.dist = dist
 
