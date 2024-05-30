@@ -8,7 +8,7 @@ class myclass:
     def valid_this(self, dist):
         return type(dist) == str
 
-class Passanger:
+class Passenger:
     def __init__(self, num):
         self.num = num
     
@@ -29,13 +29,13 @@ class Plane:
     costBas = 1000
     def __init__(self, dist, num, dur):
         self.myclass = myclass()
-        self.passanger = Passanger(num)
+        self.passenger = Passenger(num)
         self.total_time = TotalTime(num, dur)
         self.dist = dist
         self.seats = 200
 
     def sum(self):
-        if not self.myclass.valid_this(self.dist) or not self.passanger.valid_number() or not self.total_time.is_valid_total_time():
+        if not self.myclass.valid_this(self.dist) or not self.passenger.valid_number() or not self.total_time.is_valid_total_time():
             return -1
 
         number_total = self.costBas
@@ -43,7 +43,7 @@ class Plane:
         number_total += self.total_time.get_fee()
         number_total -= self.total_time.get_the_best_promo_ever()
 
-        discount = self.passanger.for_here_discount()
+        discount = self.passenger.for_here_discount()
         number_total = number_total - (number_total * discount)
         
         return max(int(number_total), 0)
@@ -70,13 +70,13 @@ class Vacation_:
 
     def __init__(self, dist, num, dur):
         self.myclass = myclass()
-        self.passanger = Passanger(num)
+        self.passenger = Passenger(num)
         self.total_time = TotalTime(num, dur)
         self.dist = dist
 
     def sum(self):
         #sum the cost of the vacation package here
-        if not self.myclass.valid_this(self.dist) or not self.passanger.valid_number() or not self.total_time.is_valid_total_time():
+        if not self.myclass.valid_this(self.dist) or not self.passenger.valid_number() or not self.total_time.is_valid_total_time():
             return -1
         
         #sum the total cost
@@ -85,7 +85,7 @@ class Vacation_:
         number_total += self.total_time.get_fee()
         number_total -= self.total_time.get_the_best_promo_ever()
 
-        discount = self.passanger.for_here_discount()
+        discount = self.passenger.for_here_discount()
         number_total = number_total - (number_total * discount)
         
         return max(int(number_total), 0)
