@@ -30,7 +30,7 @@ class Plane:
     def __init__(self, dist, num, dur):
         self.myclass = myclass()
         self.passanger = Passanger(num)
-        self.total_time = TotalTime(dur)
+        self.total_time = TotalTime(num, dur)
         self.dist = dist
         self.seats = 200
 
@@ -49,7 +49,8 @@ class Plane:
         return max(int(number_total), 0)
 
 class TotalTime:
-    def __init__(self, dur):
+    def __init__(self, num, dur):
+        self.num = num
         self.dur = dur
 
     def is_valid_total_time(self):
@@ -59,7 +60,7 @@ class TotalTime:
         return 200 if self.dur < 7 else 0
 
     def get_the_best_promo_ever(self):
-        return 200 if self.dur > 30 else 0
+        return 200 if (self.dur > 30 or self.num == 2) else 0
     
     def get_weekend(self):
         return 100 if self.dur > 7 else 0
@@ -70,7 +71,7 @@ class Vacation_:
     def __init__(self, dist, num, dur):
         self.myclass = myclass()
         self.passanger = Passanger(num)
-        self.total_time = TotalTime(dur)
+        self.total_time = TotalTime(num, dur)
         self.dist = dist
 
     def sum(self):
