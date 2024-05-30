@@ -26,6 +26,7 @@ class passanger:
             return 0.0
 
 class Plane:
+    costBas = 1000
     def __init__(self, dist, num, dur):
         self.myclass = myclass()
         self.passanger = passanger(num)
