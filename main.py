@@ -53,7 +53,7 @@ class total_TIME:
         self.dur = dur
 
     def is_valid_total_TIME(self):
-        return type(dur)==int and self.dur > 0
+        return type(self.dur)==int and self.dur > 0
 
     def getFee(self):
         return 200 if self.dur < 7 else 0
