@@ -74,7 +74,7 @@ class TotalTime:
         return 100 if self.dur > 7 else 0
 
 
-class Vacation_:
+class Vacation:
     costBas = 1000
 
     def __init__(self, dist, num, dur):
@@ -112,7 +112,7 @@ def main():
     dur = 10
 
     # this are the outputs
-    calculator = Vacation_(dist, num, dur)
+    calculator = Vacation(dist, num, dur)
     cost = calculator.sum()
 
     # this will do some printing
