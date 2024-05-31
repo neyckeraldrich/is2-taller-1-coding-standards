@@ -15,7 +15,7 @@ class Passenger:
 
     def valid_number(self):
         print("this working here")
-        return isinstance(self.num, int) and self.num > 0
+        return isinstance(self.num, int) and self.num > 0 and self.num <= 80
 
     def for_here_discount(self):
         if 4 < self.num < 10:
