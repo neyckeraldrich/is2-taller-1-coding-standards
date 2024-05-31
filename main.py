@@ -6,7 +6,7 @@ class Destination:
         return self.popular_destinations.get(dist, 0)
 
     def valid_this(self, dist):
-        return type(dist) == str
+        return isinstance(dist, str)
 
 
 class Passenger:
@@ -15,7 +15,7 @@ class Passenger:
 
     def valid_number(self):
         print("this working here")
-        return type(self.num) == int and self.num > 0
+        return isinstance(self.num, int) and self.num > 0
 
     def for_here_discount(self):
         if 4 < self.num < 10:
@@ -62,7 +62,7 @@ class TotalTime:
         self.dur = dur
 
     def is_valid_total_time(self):
-        return type(self.dur) == int and self.dur > 0
+        return isinstance(self.dur, int) and self.dur > 0
 
     def get_fee(self):
         return 200 if self.dur < 7 else 0
